@@ -3,9 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GoGoPizza</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <img src="" alt="Логотип" class="logo header__logo">
+            <button type="button-basket header__button-basket">
+                <svg class="icon-basket">
+                    <use href=""></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h1 class="title hero__title">Лучшая пицца<br>в городе</h1>
+                <p class="hero__description">Доставим менее чем за час</p>
+                <button type="button" class="button hero__button">Заказать</button>
+                <img src="" alt="Пицца" class="hero__image">
+            </div>
+        </section>
+        <section class="toppings">
+            <div class="container">
+                <h2 class="toppings__title" hidden>Топпинги</h2>
+                <p class="toppings__description">Выбрать топпинг:</p>
+                <ul class="toppings__list">
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Твердый сыр</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Моцарелла</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Сыр с плесенью</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Пепперони</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Ветчина</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Курица</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Креветки</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Помидор</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Болгарский перец</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Ананас</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Лук</label></li>
+                    <li class="toppings__item"><label class="toppings__label"><input type="checkbox" name="" class="button toppings__button">Грибы</label></li>
+                </ul>
+            </div>
+        </section>
+        <section class="menu">
+            <div class="container">
+                <h2 class="title menu__title">Пицца</h2>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <article class="card">
+                            <img src="" alt="Пицца" class="card__image">
+                            <h3 class="card__title">Маргарита</h3>
+                            <p class="card__info">
+                                <span class="card__price">480 ₽</span>
+                                <span class="card__weight">/ 25</span>
+                                <button class="button card__button">Выбрать</button>
+                            </p>
+                        </article>
+                        <article class="card">
+                            <img src="" alt="Пицца" class="card__image">
+                            <h3 class="card__title">Пепперони</h3>
+                            <p class="card__info">
+                                <span class="card__price">550 ₽</span>
+                                <span class="card__weight">/ 25</span>
+                                <button class="button card__button">Выбрать</button>
+                            </p>
+                        </article>
+                        <article class="card">
+                            <img src="" alt="Пицца" class="card__image">
+                            <h3 class="card__title">Морская</h3>
+                            <p class="card__info">
+                                <span class="card__price">590 ₽</span>
+                                <span class="card__weight">/ 25</span>
+                                <button class="button card__button">Выбрать</button>
+                            </p>
+                        </article>
+                        <article class="card">
+                            <img src="" alt="Пицца" class="card__image">
+                            <h3 class="card__title">Четыре сыра</h3>
+                            <p class="card__info">
+                                <span class="card__price">520 ₽</span>
+                                <span class="card__weight">/ 25</span>
+                                <button class="button card__button">Выбрать</button>
+                            </p>
+                        </article>
+                        <article class="card">
+                            <img src="" alt="Пицца" class="card__image">
+                            <h3 class="card__title">Капричиоза</h3>
+                            <p class="card__info">
+                                <span class="card__price">530 ₽</span>
+                                <span class="card__weight">/ 25</span>
+                                <button class="button card__button">Выбрать</button>
+                            </p>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <img src="" alt="Логотип" class="logo footer__logo">
+                <p class="footer__copyright">©go go pizza, 2024</p>
+                <ul class="footer__developers">
+                    <li class="footer__developer"><a href="" class="footer__link" rel="noopener" target="_blank">Designer: Anastasia Ilina</a></li>
+                    <li class="footer__developer"><a href="" class="footer__link" rel="noopener" target="_blank">Developer: Asain Baitasov</a></li>
+                </ul>
+        </div>
+    </footer>
 </body>
 </html>
