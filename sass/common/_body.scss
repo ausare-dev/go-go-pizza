@@ -1,0 +1,30 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--dark-color);
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 6px;
+	width: 304px;
+}
+
+a {
+	text-decoration: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
