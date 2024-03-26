@@ -243,6 +243,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: var(--dark-color);
+  background-color: var(--light-color);
 }
 
 .container {
@@ -296,13 +297,18 @@ ul {
 }
 
 .hero {
+  min-width: 304px;
   background: linear-gradient(47deg, #eb8a14 0%, #ecd55a 100%);
   border-radius: 0 0 16px 16px;
   padding-top: 79px;
   padding-bottom: 213px;
 }
+.hero__container {
+  position: relative;
+}
 .hero__title {
   font-size: 38px;
+  line-height: 100%;
   margin-bottom: 12px;
 }
 .hero__description {
@@ -323,10 +329,10 @@ ul {
 }
 .hero__image {
   position: absolute;
-  top: 273px;
+  top: 194px;
   width: 261px;
   height: 230px;
-  left: 38px;
+  left: 30px;
 }
 
 .title {
@@ -339,6 +345,57 @@ ul {
   border: none;
   background-color: var(--white-color);
   color: var(--orange-color);
+}
+
+.toppings {
+  padding-top: 67px;
+  padding-bottom: 8px;
+}
+.toppings__title {
+  position: fixed;
+  transform: scale(0);
+}
+.toppings__open-button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.toppings__open-button.toppings__open-button--active .toppings__icon {
+  transform: scale(-1);
+}
+.toppings__icon {
+  margin-left: 4px;
+  transform: scale(1);
+  transition: transform 5s linear;
+}
+.toppings__list {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.toppings__list.toppings__list--show {
+  display: flex;
+}
+.toppings__button {
+  display: block;
+  color: var(--beige-color);
+}
+.toppings__button:focus {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+}
+.toppings__input {
+  position: absolute;
+  appearance: none;
+}
+.toppings__input:checked + .toppings__button {
+  background-color: var(--orange-color);
+  color: var(--white-color);
 }
 
 /*# sourceMappingURL=style.css.map */

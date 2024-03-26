@@ -1,10 +1,15 @@
 .hero {
+	min-width: 304px;
 	background: linear-gradient(47deg, #eb8a14 0%, #ecd55a 100%);
 	border-radius: 0 0 16px 16px;
 	padding-top: 79px;
 	padding-bottom: 213px;
+	&__container {
+		position: relative;
+	}
 	&__title {
 		font-size: 38px;
+		line-height: 100%;
 		margin-bottom: 12px;
 	}
 
@@ -28,10 +33,10 @@
 
 	&__image {
 		position: absolute;
-		top: 273px;
+		top: 194px;
 		width: 261px;
 		height: 230px;
-		left: 38px;
+		left: 30px;
 	}
 }
 .title {
@@ -43,4 +48,5 @@
 	border: none;
 	background-color: var(--white-color);
 	color: var(--orange-color);
+	
 }
