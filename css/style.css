@@ -356,6 +356,7 @@ ul {
   transform: scale(0);
 }
 .toppings__open-button {
+  padding: 0;
   border: none;
   background-color: transparent;
   display: flex;
@@ -370,13 +371,16 @@ ul {
 .toppings__icon {
   margin-left: 4px;
   transform: scale(1);
-  transition: transform 5s linear;
+  transition: transform 0.5s ease-out;
 }
 .toppings__list {
   display: none;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 .toppings__list.toppings__list--show {
   display: flex;

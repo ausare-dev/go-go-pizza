@@ -194,8 +194,8 @@
 									<button class="button card__button">Выбрать</button>
 								</div>
 							</article>
-							</li>
-							<li class="menu__item">
+						</li>
+						<li class="menu__item">
 							<article class="card">
 								<img
 									src="./images/Frame 2.png"
@@ -210,10 +210,9 @@
 									</p>
 									<button class="button card__button">Выбрать</button>
 								</div>
-								
 							</article>
-							</li>
-							<li class="menu__item">
+						</li>
+						<li class="menu__item">
 							<article class="card">
 								<img
 									src="./images/Frame 3.png"
@@ -221,7 +220,6 @@
 									class="card__image"
 								/>
 								<div class="card__content">
-
 									<h3 class="card__title">Морская</h3>
 									<p class="card__info">
 										<span class="card__price">590 ₽</span>
@@ -230,8 +228,8 @@
 									<button class="button card__button">Выбрать</button>
 								</div>
 							</article>
-							</li>
-							<li class="menu__item">
+						</li>
+						<li class="menu__item">
 							<article class="card">
 								<img
 									src="./images/Frame 4.png"
@@ -239,7 +237,6 @@
 									class="card__image"
 								/>
 								<div class="card__content">
-									
 									<h3 class="card__title">Четыре сыра</h3>
 									<p class="card__info">
 										<span class="card__price">520 ₽</span>
@@ -248,8 +245,8 @@
 									<button class="button card__button">Выбрать</button>
 								</div>
 							</article>
-							</li>
-							<li class="menu__item">
+						</li>
+						<li class="menu__item">
 							<article class="card">
 								<img
 									src="./images/Frame 8.png"
@@ -257,7 +254,6 @@
 									class="card__image"
 								/>
 								<div class="card__content">
-
 									<h3 class="card__title">Капричиоза</h3>
 									<p class="card__info">
 										<span class="card__price">530 ₽</span>
@@ -289,5 +285,22 @@
 				</ul>
 			</div>
 		</footer>
+		<script>
+			const btn = document.querySelector('.toppings__open-button');
+			const toppingsList = document.querySelector('.toppings__list');
+			btn.addEventListener('click', () => {
+				if (!toppingsList.classList.contains('toppings__list--show')) {
+					toppingsList.classList.add('toppings__list--show');
+					btn.classList.add('toppings__open-button--active');
+					toppingsList.style.maxHeight = toppingsList.scrollHeight + 'px';
+				} else {
+					btn.classList.remove('toppings__open-button--active');
+					toppingsList.style.maxHeight = null;
+					setTimeout(() => {
+						toppingsList.classList.remove('toppings__list--show');
+					}, 300);
+				}
+			});
+		</script>
 	</body>
 </html>
