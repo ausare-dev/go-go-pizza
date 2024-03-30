@@ -10,6 +10,12 @@ body {
 	margin: 0 auto;
 	padding: 0 6px;
 	width: 304px;
+	@media screen and (min-width: $table) {
+		width: $table;
+	}
+	@media screen and (min-width: $desktop) {
+		width: $desktop;
+	}
 }
 
 a {

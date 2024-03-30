@@ -1,15 +1,22 @@
 .header {
-    position: absolute;
+	position: absolute;
 	width: 100%;
-    top: 24px;
+	top: 24px;
+	@media screen and (min-width: $table) {
+		top: 40px;
+	}
 	&__container {
 		display: flex;
 		justify-content: space-between;
-        align-items: center;
+		align-items: center;
 	}
 	&__logo {
 		width: 120px;
 		height: 17px;
+		@media screen and (min-width: $table) {
+			width: 164px;
+			height: 23px;
+		}
 	}
 }
 .button-basket {

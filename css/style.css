@@ -251,6 +251,16 @@ body {
   padding: 0 6px;
   width: 304px;
 }
+@media screen and (min-width: 700px) {
+  .container {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .container {
+    width: 1312px;
+  }
+}
 
 a {
   text-decoration: none;
@@ -277,6 +287,11 @@ ul {
   width: 100%;
   top: 24px;
 }
+@media screen and (min-width: 700px) {
+  .header {
+    top: 40px;
+  }
+}
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -285,6 +300,12 @@ ul {
 .header__logo {
   width: 120px;
   height: 17px;
+}
+@media screen and (min-width: 700px) {
+  .header__logo {
+    width: 164px;
+    height: 23px;
+  }
 }
 
 .button-basket {
