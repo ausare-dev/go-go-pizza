@@ -18,7 +18,8 @@ html {
   line-height: 1.15; /* 1. Correct the line height in all browsers. */
   -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
   -moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
-  tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
 }
 
 /*
@@ -50,7 +51,8 @@ Text-level semantics
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 abbr[title] {
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -245,6 +247,11 @@ body {
   color: var(--dark-color);
   background-color: var(--light-color);
 }
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 20px;
+  }
+}
 
 .container {
   margin: 0 auto;
@@ -324,6 +331,18 @@ ul {
   padding-top: 79px;
   padding-bottom: 213px;
 }
+@media screen and (min-width: 700px) {
+  .hero {
+    padding-top: 116px;
+    padding-bottom: 90px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .hero {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+}
 .hero__container {
   position: relative;
 }
@@ -332,10 +351,32 @@ ul {
   line-height: 100%;
   margin-bottom: 12px;
 }
+@media screen and (min-width: 700px) {
+  .hero__title {
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .hero__title {
+    font-size: 80px;
+  }
+}
 .hero__description {
   display: flex;
+  align-items: center;
   line-height: 140%;
   margin-bottom: 24px;
+}
+@media screen and (min-width: 700px) {
+  .hero__description {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .hero__description {
+    margin-bottom: 64px;
+  }
 }
 .hero__description::before {
   content: "";
@@ -355,6 +396,22 @@ ul {
   height: 230px;
   left: 30px;
 }
+@media screen and (min-width: 700px) {
+  .hero__image {
+    top: 87px;
+    width: 382px;
+    height: 337px;
+    left: 302px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .hero__image {
+    top: -84px;
+    width: 670px;
+    height: 591px;
+    left: 607px;
+  }
+}
 
 .title {
   font-weight: 900;
@@ -372,6 +429,12 @@ ul {
   padding-top: 67px;
   padding-bottom: 8px;
 }
+@media screen and (min-width: 700px) {
+  .toppings {
+    padding-top: 92px;
+    padding-bottom: 16px;
+  }
+}
 .toppings__title {
   position: fixed;
   transform: scale(0);
@@ -385,6 +448,11 @@ ul {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
+}
+@media screen and (min-width: 700px) {
+  .toppings__open-button {
+    font-size: 24px;
+  }
 }
 .toppings__open-button.toppings__open-button--active .toppings__icon {
   transform: scale(-1);
@@ -403,6 +471,11 @@ ul {
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
+@media screen and (min-width: 700px) {
+  .toppings__list {
+    margin-bottom: 16px;
+  }
+}
 .toppings__list.toppings__list--show {
   display: flex;
 }
@@ -416,7 +489,9 @@ ul {
 }
 .toppings__input {
   position: absolute;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .toppings__input:checked + .toppings__button {
   background-color: var(--orange-color);
@@ -430,14 +505,40 @@ ul {
   border-style: solid;
   border-color: var(--beige-color);
 }
+@media screen and (min-width: 700px) {
+  .menu {
+    padding-top: 64px;
+    padding-bottom: 104px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .menu {
+    padding-top: 24px;
+  }
+}
 .menu__title {
   font-size: 28px;
   margin-bottom: 24px;
+}
+@media screen and (min-width: 700px) {
+  .menu__title {
+    font-size: 44px;
+  }
 }
 .menu__list {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 700px) {
+  .menu__list {
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .menu__list {
+    gap: 20px;
+  }
 }
 
 .card {
@@ -446,12 +547,30 @@ ul {
   position: relative;
   display: flex;
 }
+@media screen and (min-width: 700px) {
+  .card {
+    height: 350px;
+    width: 336px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .card {
+    height: 350px;
+    width: 310px;
+  }
+}
 .card__image {
   width: 80px;
   height: 80px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+@media screen and (min-width: 700px) {
+  .card__image {
+    height: 180px;
+    width: 180px;
+  }
 }
 .card__content {
   height: 158px;
@@ -466,13 +585,30 @@ ul {
   text-align: center;
   padding-bottom: 8px;
 }
+@media screen and (min-width: 700px) {
+  .card__content {
+    height: 304px;
+    margin-top: 46px;
+    padding-bottom: 24px;
+  }
+}
 .card__title {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 4px;
 }
+@media screen and (min-width: 700px) {
+  .card__title {
+    font-size: 24px;
+  }
+}
 .card__info {
   margin-bottom: 16px;
+}
+@media screen and (min-width: 700px) {
+  .card__info {
+    margin-bottom: 24px;
+  }
 }
 .card__price {
   font-weight: 600;
@@ -485,12 +621,27 @@ ul {
   background-color: var(--light-color);
   color: var(--orange-color);
 }
+@media screen and (min-width: 700px) {
+  .card__button {
+    padding: 8px 103px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .card__button {
+    padding: 8px 90px;
+  }
+}
 
 .footer {
   padding-top: 32px;
   padding-bottom: 24px;
   color: var(--beige-color);
-  font-size: 14px;
+}
+@media screen and (min-width: 700px) {
+  .footer {
+    padding-top: 64px;
+    padding-bottom: 40px;
+  }
 }
 .footer__container {
   display: flex;
@@ -502,6 +653,13 @@ ul {
   height: 31px;
   width: 222px;
 }
+@media screen and (min-width: 700px) {
+  .footer__logo {
+    margin-bottom: 64px;
+    height: 57px;
+    width: 400px;
+  }
+}
 .footer__copyright {
   margin-bottom: 16px;
 }
@@ -510,6 +668,4 @@ ul {
 }
 .footer__link {
   color: var(--beige-color);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

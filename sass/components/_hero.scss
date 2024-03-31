@@ -4,6 +4,15 @@
 	border-radius: 0 0 16px 16px;
 	padding-top: 79px;
 	padding-bottom: 213px;
+	@media screen and (min-width: $table) {
+		padding-top: 116px;
+		padding-bottom: 90px;
+	}
+	@media screen and (min-width: $desktop) {
+		padding-top: 140px;
+		padding-bottom: 100px;
+	}
+
 	&__container {
 		position: relative;
 	}
@@ -11,12 +20,25 @@
 		font-size: 38px;
 		line-height: 100%;
 		margin-bottom: 12px;
+		@media screen and (min-width: $table) {
+			font-size: 64px;
+			margin-bottom: 24px;
+		}
+		@media screen and (min-width: $desktop) {
+			font-size: 80px;
+		}
 	}
-
 	&__description {
 		display: flex;
+		align-items: center;
 		line-height: 140%;
 		margin-bottom: 24px;
+		@media screen and (min-width: $table) {
+			margin-bottom: 50px;
+		}
+		@media screen and (min-width: $desktop) {
+			margin-bottom: 64px;
+		}
 	}
 	&__description::before {
 		content: '';
@@ -37,6 +59,18 @@
 		width: 261px;
 		height: 230px;
 		left: 30px;
+		@media screen and (min-width: $table) {
+			top: 87px;
+			width: 382px;
+			height: 337px;
+			left: 302px;
+		}
+		@media screen and (min-width: $desktop) {
+			top: -84px;
+			width: 670px;
+			height: 591px;
+			left: 607px;
+		}
 	}
 }
 .title {
@@ -48,5 +82,4 @@
 	border: none;
 	background-color: var(--white-color);
 	color: var(--orange-color);
-	
 }

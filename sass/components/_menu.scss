@@ -4,15 +4,31 @@
 	border-width: 0px 0px 2px 0px;
 	border-style: solid;
 	border-color: var(--beige-color);
+	@media screen and (min-width: $table) {
+		padding-top: 64px;
+		padding-bottom: 104px;
+	}
+	@media screen and (min-width: $desktop) {
+		padding-top: 24px;
+	}
 	&__title {
 		font-size: 28px;
 		margin-bottom: 24px;
+		@media screen and (min-width: $table) {
+			font-size: 44px;
+		}
 	}
 
 	&__list {
 		display: flex;
 		gap: 12px;
 		flex-wrap: wrap;
+		@media screen and (min-width: $table) {
+			gap: 16px;
+		}
+		@media screen and (min-width: $desktop) {
+			gap: 20px;
+		}
 	}
 }
 .card {
@@ -20,12 +36,24 @@
 	width: 140px;
 	position: relative;
 	display: flex;
+	@media screen and (min-width: $table) {
+		height: 350px;
+		width: 336px;
+	}
+	@media screen and (min-width: $desktop) {
+		height: 350px;
+		width: 310px;
+	}
 	&__image {
 		width: 80px;
 		height: 80px;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
+		@media screen and (min-width: $table) {
+			height: 180px;
+			width: 180px;
+		}
 	}
 	&__content {
 		height: 158px;
@@ -39,16 +67,27 @@
 		align-items: center;
 		text-align: center;
 		padding-bottom: 8px;
+		@media screen and (min-width: $table) {
+			height: 304px;
+			margin-top: 46px;
+			padding-bottom: 24px;
+		}
 	}
 
 	&__title {
 		font-size: 18px;
 		font-weight: 600;
 		margin-bottom: 4px;
+		@media screen and (min-width: $table) {
+			font-size: 24px;
+		}
 	}
 
 	&__info {
 		margin-bottom: 16px;
+		@media screen and (min-width: $table) {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__price {
@@ -63,5 +102,11 @@
 		padding: 8px 33px;
 		background-color: var(--light-color);
 		color: var(--orange-color);
+		@media screen and (min-width: $table) {
+			padding: 8px 103px;
+		}
+		@media screen and (min-width: $desktop) {
+			padding: 8px 90px;
+		}
 	}
 }

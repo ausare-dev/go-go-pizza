@@ -2,7 +2,10 @@
 	padding-top: 32px;
 	padding-bottom: 24px;
 	color: var(--beige-color);
-	font-size: 14px;
+	@media screen and (min-width: $table) {
+		padding-top: 64px;
+		padding-bottom: 40px;
+	}
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -12,6 +15,11 @@
 		margin-bottom: 32px;
 		height: 31px;
 		width: 222px;
+		@media screen and (min-width: $table) {
+			margin-bottom: 64px;
+			height: 57px;
+			width: 400px;
+		}
 	}
 
 	&__copyright {

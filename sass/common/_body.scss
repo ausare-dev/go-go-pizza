@@ -4,6 +4,9 @@ body {
 	font-weight: 400;
 	color: var(--dark-color);
 	background-color: var(--light-color);
+	@media screen and (min-width: $table) {
+		font-size: 20px;
+	}
 }
 
 .container {
@@ -35,4 +38,3 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-

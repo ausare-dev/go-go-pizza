@@ -1,6 +1,10 @@
 .toppings {
 	padding-top: 67px;
 	padding-bottom: 8px;
+	@media screen and (min-width: $table) {
+		padding-top: 92px;
+		padding-bottom: 16px;
+	}
 	&__title {
 		position: fixed;
 		transform: scale(0);
@@ -15,6 +19,9 @@
 		font-size: 18px;
 		font-weight: 600;
 		margin-bottom: 16px;
+		@media screen and (min-width: $table) {
+			font-size: 24px;
+		}
 		&.toppings__open-button--active {
 			.toppings__icon {
 				transform: scale(-1);
@@ -35,6 +42,9 @@
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.3s ease;
+		@media screen and (min-width: $table) {
+			margin-bottom: 16px;
+		}
 		&.toppings__list--show {
 			display: flex;
 		}
