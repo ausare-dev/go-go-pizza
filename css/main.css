@@ -438,6 +438,15 @@ ul {
 .toppings__title {
   position: fixed;
   transform: scale(0);
+  font-weight: 600;
+  font-size: 24px;
+}
+@media screen and (min-width: 1312px) {
+  .toppings__title {
+    transform: scale(1);
+    position: relative;
+    margin-bottom: 16px;
+  }
 }
 .toppings__open-button {
   padding: 0;
@@ -452,6 +461,11 @@ ul {
 @media screen and (min-width: 700px) {
   .toppings__open-button {
     font-size: 24px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .toppings__open-button {
+    display: none;
   }
 }
 .toppings__open-button.toppings__open-button--active .toppings__icon {
@@ -474,6 +488,13 @@ ul {
 @media screen and (min-width: 700px) {
   .toppings__list {
     margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .toppings__list {
+    display: flex;
+    max-height: 100%;
+    margin-bottom: 32px;
   }
 }
 .toppings__list.toppings__list--show {

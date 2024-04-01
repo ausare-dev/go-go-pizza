@@ -8,6 +8,13 @@
 	&__title {
 		position: fixed;
 		transform: scale(0);
+		font-weight: 600;
+		font-size: 24px;
+		@media screen and (min-width: $desktop) {
+			transform: scale(1);
+			position: relative;
+			margin-bottom: 16px;
+		}
 	}
 
 	&__open-button {
@@ -21,6 +28,9 @@
 		margin-bottom: 16px;
 		@media screen and (min-width: $table) {
 			font-size: 24px;
+		}
+		@media screen and (min-width: $desktop) {
+			display: none;
 		}
 		&.toppings__open-button--active {
 			.toppings__icon {
@@ -44,6 +54,11 @@
 		transition: max-height 0.3s ease;
 		@media screen and (min-width: $table) {
 			margin-bottom: 16px;
+		}
+		@media screen and (min-width: $desktop) {
+			display: flex;
+			max-height: 100%;
+			margin-bottom: 32px;
 		}
 		&.toppings__list--show {
 			display: flex;
