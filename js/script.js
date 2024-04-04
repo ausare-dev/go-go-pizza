@@ -1,4 +1,5 @@
 import { renderPizzas } from "./modules/renderPizza.js";
+import { renderToppings } from "./modules/renderToppings.js";
 
 const toppingsToggle = () => {
 	const btn = document.querySelector('.toppings__open-button');
@@ -23,6 +24,7 @@ const toppingsToggle = () => {
 
 const init = () => {
 	toppingsToggle();
+	renderToppings();
 	renderPizzas();
 };
 
