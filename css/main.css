@@ -423,6 +423,7 @@ ul {
   border: none;
   background-color: var(--white-color);
   color: var(--orange-color);
+  cursor: pointer;
 }
 
 .toppings {
@@ -504,9 +505,13 @@ ul {
   display: block;
   color: var(--beige-color);
 }
-.toppings__button:focus {
+.toppings__button:focus, .toppings__button:hover {
   background-color: var(--orange-color);
   color: var(--white-color);
+}
+.toppings__button--reset {
+  color: var(--orange-color);
+  font-weight: 600;
 }
 .toppings__input {
   position: absolute;

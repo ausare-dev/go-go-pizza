@@ -28,9 +28,11 @@ const createCard = data => {
 	return card;
 };
 
-export const renderPizzas = async () => {
+export const renderPizzas = async (toppings) => {
 	const pizzas = await getPizzas(
-		'https://deserted-substantial-bestseller.glitch.me/api/products'
+		`https://deserted-substantial-bestseller.glitch.me/api/products${
+			toppings ? `?toppings=${toppings}` : ''
+		}`,
 	);
 	const pizzaList = document.querySelector('.menu__list');
 	pizzaList.textContent = '';

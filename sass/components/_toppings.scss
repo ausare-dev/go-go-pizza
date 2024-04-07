@@ -68,9 +68,13 @@
 	&__button {
 		display: block;
 		color: var(--beige-color);
-		&:focus {
+		&:focus, &:hover {
 			background-color: var(--orange-color);
 			color: var(--white-color);
+		}
+		&--reset {
+			color: var(--orange-color);
+			font-weight: 600;
 		}
 	}
 
