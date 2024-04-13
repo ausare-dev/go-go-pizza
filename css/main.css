@@ -720,4 +720,29 @@ ul {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.modal {
+  position: fixed;
+  background-color: rgba(44, 40, 38, 0.5);
+  inset: 0;
+  cursor: pointer;
+  display: flex;
+  overflow-y: auto;
+  padding: 30px 6px;
+}
+.modal__main {
+  position: relative;
+  cursor: default;
+  padding: 16px;
+  border-radius: 32px;
+  background-color: var(--white-color);
+  margin: auto;
+}
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: 0;
+  background-color: inherit;
 }/*# sourceMappingURL=main.css.map */
