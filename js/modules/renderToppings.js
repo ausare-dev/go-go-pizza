@@ -55,5 +55,6 @@ export const renderToppings = async () => {
 	btnReset.addEventListener('click', ()=>{
 		itemReset.remove();
 		toppingsForm.reset();
+		renderPizzas();
 	})
 };

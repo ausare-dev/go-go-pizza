@@ -1,4 +1,11 @@
 import { getPizzas } from "./getData.js";
+import { modalController } from "./modalController.js";
+
+const btnReset = document.createElement('button');
+btnReset.classList.add('button', 'menu__reset-toppings');
+btnReset.textContent = 'Сбросить фильтры';
+btnReset.type = 'reset';
+btnReset.setAttribute('form', 'toppings')
 
 const createCard = data => {
 	const card = document.createElement('article');
@@ -34,14 +41,33 @@ export const renderPizzas = async (toppings) => {
 			toppings ? `?toppings=${toppings}` : ''
 		}`,
 	);
+
+	const pizzaTitle = document.querySelector('.menu__title');
 	const pizzaList = document.querySelector('.menu__list');
 	pizzaList.textContent = '';
-	const items = pizzas.map(data => {
-		const item = document.createElement('li');
-		item.classList.add('menu__item');
-		const card = createCard(data);
-		item.append(card);
-		return item;
-	});
-	pizzaList.append(...items);
+	if(pizzas.length){
+		pizzaTitle.textContent = 'Пицца';
+		btnReset.remove();
+		const items = pizzas.map(data => {
+			const item = document.createElement('li');
+			item.classList.add('menu__item');
+			const card = createCard(data);
+			item.append(card);
+			return item;
+		});
+		pizzaList.append(...items);
+		modalController({
+			modal: '.modal-pizza',
+			btnOpen: '.card__button',
+			btnClose: '.modal__close'
+		});
+	} else {
+		pizzaTitle.textContent = 'Такой пиццы у нас нет :(';
+		pizzaTitle.after(btnReset);
+	}
 };
+btnReset.addEventListener('click', () => {
+	renderPizzas();
+	document.querySelector('.toppings__button--reset').remove();
+	
+});
